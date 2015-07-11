@@ -1,0 +1,37 @@
+/*
+Theme Name: Baskerville -- Optimized for Event Smart
+Theme URI: https://eventsmart.com
+Description: Baskerville is a beautiful, responsive and retina-ready masonry theme for hoarders. It’s the perfect way to showcase your posts, videos, images and galleries, and share your favorite quotes and links. Features responsive design, retina-ready assets, full-width header image, support for all post formats, custom logo upload, custom widgets (video, Flickr and Dribbble), four page templates (including a contributors template) and editor styling.
+Optimized for eventsmart.com
+Author: Event Smart & Anders Norén
+Author URI: https://eventsmart.com
+Template:     baskerville
+Version:      1.0.0
+Tags: black, dark, white, green, two-columns, fluid-layout, responsive-layout, custom-header, custom-menu, featured-images, flexible-header, post-formats, sticky-post, threaded-comments, translation-ready, editor-style
+Text Domain:  baskerville__optimized_for_event_smart
+*/
+@import url("../baskerville/style.css");
+div.event-content p {
+	margin: 20px;
+}
+.ee-event-datetimes-ul li {
+	float: left;
+	width: 50%;
+}
+
+.ee-event-datetimes-ul:before,
+.ee-event-datetimes-ul:after {
+	content: '';
+	display: table;
+}
+
+.ee-event-datetimes-ul:after {
+	clear: both;
+}
+.post-excerpt {
+    padding-left: 5%;
+}
+.section-inner .event-archive-tickets {
+    margin-left: 0;
+    
+}

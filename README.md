@@ -1,2 +1,2 @@
 # ee-child-theme-baskerville
-Baskerville child theme for Event Espresso 4
+Baskerville WordPress child theme optimized for Event Smart and Event Espresso 4

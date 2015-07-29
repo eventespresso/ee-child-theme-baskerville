@@ -54,8 +54,9 @@
 <div class="post-meta">
 
 	<?php 
+	echo 'post type: ' . get_post_type();
 			if ( 'espresso_events' == get_post_type() && is_front_page() ) :?>
-				<a class="post-date" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php espresso_event_date(); ?></a>
+				<a class="post-date" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php espresso_event_date_range(); ?></a>
 	<?php
 			elseif ( 'espresso_events' == get_post_type() && !is_front_page() ) :
 			elseif ( 'espresso_venues' == get_post_type() ) :

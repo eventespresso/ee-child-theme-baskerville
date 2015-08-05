@@ -5,7 +5,7 @@
 			if ( 'espresso_events' == get_post_type() && is_front_page() ) :
 				_e( 'Event', 'baskerville' );
 			elseif ( 'espresso_events' == get_post_type() && !is_front_page() ) :
-				espresso_event_date();
+				//espresso_event_date();
 			elseif ( 'espresso_venues' == get_post_type() ) :
 				echo baskerville_ee_venue_city_state();
 			else :
@@ -54,9 +54,8 @@
 <div class="post-meta">
 
 	<?php 
-	echo 'post type: ' . get_post_type();
 			if ( 'espresso_events' == get_post_type() && is_front_page() ) :?>
-				<a class="post-date" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php espresso_event_date_range(); ?></a>
+				<a class="post-date" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php espresso_event_date( '', '', get_the_ID() ); ?></a>
 	<?php
 			elseif ( 'espresso_events' == get_post_type() && !is_front_page() ) :
 			elseif ( 'espresso_venues' == get_post_type() ) :

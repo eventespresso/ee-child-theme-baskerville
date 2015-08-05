@@ -246,7 +246,7 @@
 							
 								<?php endif; ?>
 								
-								<?php edit_post_link( __('Edit post', 'baskerville')); ?>
+								
 									
 								<div class="clear"></div>
 							

@@ -6,11 +6,10 @@ Optimized for eventsmart.com
 Author: Event Smart & Anders Norén
 Author URI: https://eventsmart.com
 Template:     baskerville
-Version:      1.0.0
+Version:      1.0.1
 Tags: black, dark, white, green, two-columns, fluid-layout, responsive-layout, custom-header, custom-menu, featured-images, flexible-header, post-formats, sticky-post, threaded-comments, translation-ready, editor-style
 Text Domain:  baskerville__optimized_for_event_smart
 */
-@import url("../baskerville/style.css");
 div.event-content p {
 	margin: 20px;
 }
@@ -34,4 +33,26 @@ div.event-content p {
 .section-inner .event-archive-tickets {
     margin-left: 0;
     
+}
+
+div.ee-reg-qstn {
+    margin-bottom: 20px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+}
+.post-content label {
+    font-family: "Roboto",sans-serif;
+    font-size: 1rem;
+    font-weight: unset;
+    line-height: 150%;
+    margin-bottom: 3px;
+}
+.ee-reg-qstn {
+    font-size: 14px;
+}
+
+.ticket-selector-submit-btn {
+    float: right;
+    margin-top: 20px !important;
 }

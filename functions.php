@@ -15,3 +15,8 @@ function baskerville_ee_venue_city_state( $VNU_ID = 0, $echo = TRUE ) {
 	}
 	return $city . $state;
 }
+
+/**
+* Customizer additions.
+*/
+require_once get_stylesheet_directory() . '/inc/customizer.php';

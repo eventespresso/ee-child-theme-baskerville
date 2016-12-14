@@ -4,13 +4,22 @@
 	
 	$format = get_post_format();
 	
+	if ( get_theme_mod( 'ee_baskerville_child_site_layout_setting' ) ) : 
+
+	$layout = get_theme_mod( 'ee_baskerville_child_site_layout_setting' );
+
+	else : $layout = 'fleft';
+
+	endif; 
+
 ?>
+
 
 <div class="wrapper section medium-padding">
 										
 	<div class="section-inner">
 	
-		<div class="content fleft">
+		<div class="content <?php echo $layout ?>">
 												        
 			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 						
@@ -270,7 +279,7 @@
 		
 		</div> <!-- /content -->
 		
-		<?php get_sidebar(); ?>
+		<?php if ( $layout == 'fleft' ) : get_sidebar(); endif; ?>
 		
 		<div class="clear"></div>
 		

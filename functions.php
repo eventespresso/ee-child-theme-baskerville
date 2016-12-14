@@ -1,5 +1,9 @@
 <?php
-
+//Load the parent theme css file
+add_action( 'wp_enqueue_scripts', 'baskerville_theme_enqueue_styles' );
+function baskerville_theme_enqueue_styles() {
+	wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' );
+}
 function baskerville_ee_venue_city_state( $VNU_ID = 0, $echo = TRUE ) {
 	EE_Registry::instance()->load_helper( 'Venue_View' );
 	$venue = EEH_Venue_View::get_venue( $VNU_ID );

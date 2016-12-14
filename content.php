@@ -2,15 +2,17 @@
 	
     <h2 class="post-title"><a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
     <?php 
-			if ( 'espresso_events' == get_post_type() && is_front_page() ) :
-				_e( 'Event', 'baskerville' );
-			elseif ( 'espresso_events' == get_post_type() && !is_front_page() ) :
-				//espresso_event_date();
-			elseif ( 'espresso_venues' == get_post_type() ) :
+			if ( 'espresso_venues' == get_post_type() ) :
 				echo baskerville_ee_venue_city_state();
-			else :
-			endif ?>
-    
+			endif; ?>
+ <?php 		if ( 'espresso_events' == get_post_type() && is_front_page() && function_exists( 'espresso_view_details_btn'  ) ) : ?>	
+				<div class="post-content section-inner">
+					<form action="<?php the_permalink(); ?>" method="POST">
+						<input id="ticket-selector-submit-<?php the_ID(); ?>-btn" class="ticket-selector-submit-btn view-details-btn" type="submit" value="<?php _e( 'View Details' );?>">
+					</form>
+					<div class="clear"></div>
+				</div>
+<?php 		endif; ?>   
     <?php if( is_sticky() ) { ?> <span class="sticky-post"><?php _e('Sticky post', 'baskerville'); ?></span> <?php } ?>
     
 </div> <!-- /post-header -->
@@ -31,6 +33,7 @@
 	<?php endif; ?>
 									                                    	    
 <div class="post-excerpt">
+
 <?php 
 			if ( 'espresso_events' == get_post_type() && !( is_front_page() ) && espresso_display_ticket_selector_in_event_list() ) : ?>
 					<div class="post-content section-inner thin event-archive-tickets">
@@ -48,13 +51,12 @@
 				the_excerpt('100');
 			endif; ?>      			            	                                                                                            
 	
-
 </div> <!-- /post-excerpt -->
 
 <div class="post-meta">
 
 	<?php 
-			if ( 'espresso_events' == get_post_type() && is_front_page() ) :?>
+			if ( 'espresso_events' == get_post_type() && is_front_page() && function_exists( 'espresso_event_date'  ) ) :?>
 				<a class="post-date" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php espresso_event_date( '', '', get_the_ID() ); ?></a>
 	<?php
 			elseif ( 'espresso_events' == get_post_type() && !is_front_page() ) :

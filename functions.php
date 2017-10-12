@@ -1,4 +1,9 @@
 <?php
+require 'theme_update_check.php';
+$MyUpdateChecker = new ThemeUpdateChecker(
+    'ee-child-theme-baskerville',
+    'https://kernl.us/api/v1/theme-updates/59dfce4951d6e061825572c7/'
+);
 //Load the parent theme css file
 add_action( 'wp_enqueue_scripts', 'baskerville_theme_enqueue_styles' );
 function baskerville_theme_enqueue_styles() {

@@ -24,7 +24,7 @@ class ThemeUpdateChecker {
 	public $enableAutomaticChecking = true; //Enable/disable automatic update checks.
 
 	// Kernl Custom
-	public $purchaseCode = false;
+	public $license = false;
 	public $remoteGetTimeout = 10;
 
 	protected $optionName = '';      //Where to store update info.
@@ -82,7 +82,7 @@ class ThemeUpdateChecker {
 	public function requestUpdate($queryArgs = array()){
 		//Query args to append to the URL. Themes can add their own by using a filter callback (see addQueryArgFilter()).
 		$queryArgs['installed_version'] = $this->getInstalledVersion();
-		if($this->purchaseCode) { $queryArgs['code'] = urlencode($this->purchaseCode); }
+		if($this->license) { $queryArgs['license'] = urlencode($this->license); }
         try {
             $urlParts = parse_url(get_site_url());
             $domain = $urlParts['host'];
